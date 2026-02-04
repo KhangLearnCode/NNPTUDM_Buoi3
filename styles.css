@@ -1,0 +1,95 @@
+.thumb { width:48px; height:48px; object-fit:cover; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+
+:root{
+	--cyan-50: #ecfeff;
+	--cyan-100: #cffafe;
+	--cyan-300: #67e8f9;
+	--cyan-500: #06b6d4;
+	--cyan-700: #0891b2;
+	--bg: #f8fdfd;
+	--card: #ffffff;
+}
+
+body{
+	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg,var(--bg), #f1fbfb 60%);
+	color: #044048;
+}
+
+.container{
+	background: var(--card);
+	border-radius: 12px;
+	padding: 22px;
+	box-shadow: 0 6px 30px rgba(3,105,121,0.08);
+}
+
+/* keep the dashboard card centered and constrained so inner controls don't overflow */
+.container{
+	max-width: 1100px;
+	margin: 20px auto;
+}
+
+h3{
+	color: var(--cyan-700);
+	margin:0;
+}
+
+.btn-primary{
+	background: linear-gradient(90deg,var(--cyan-500),var(--cyan-300));
+	border: none;
+	color: #fff;
+}
+.btn-primary:hover{ background: linear-gradient(90deg,var(--cyan-700),var(--cyan-500)); }
+
+.btn-outline-secondary{
+	border-color: rgba(6,182,212,0.18);
+	color: var(--cyan-700);
+}
+
+/* table */
+.table thead th{
+	background: linear-gradient(90deg,var(--cyan-100),var(--cyan-50));
+	color: var(--cyan-700);
+	border-bottom: 0;
+}
+.table tbody tr:hover{ background: rgba(6,182,212,0.04); }
+.table td, .table th{ vertical-align: middle; }
+
+.pagination .page-item.active .page-link{
+	background: var(--cyan-500);
+	border-color: var(--cyan-500);
+}
+.pagination .page-link{ color: var(--cyan-700); }
+
+/* ensure pagination stays inside the card and wraps neatly */
+#pagination{
+	display:flex;
+	flex-wrap:wrap;
+	gap:6px;
+	padding-left:0.25rem;
+	justify-content:flex-start;
+	overflow:auto;
+}
+
+/* make pagination items a bit smaller so they fit better */
+.pagination .page-link{ padding: .25rem .5rem; font-size: .85rem; }
+
+/* ensure table container doesn't cause unexpected horizontal overflow */
+.table-responsive{ overflow:auto; }
+
+/* modals */
+.modal-content{ border-radius:12px; }
+.modal-header{ background: linear-gradient(90deg,var(--cyan-300),var(--cyan-500)); color: #fff; border-bottom: none; }
+.modal-title{ color: #fff; }
+
+.form-control:focus{ box-shadow: 0 0 0 0.15rem rgba(6,182,212,0.18); border-color: var(--cyan-500); }
+
+.tooltip-inner{ max-width: 420px; text-align: left; background: #fff; color: #0b5560; border:1px solid rgba(6,182,212,0.12); box-shadow: 0 6px 20px rgba(3,105,121,0.06); }
+
+small.text-muted{ color: #065a63; }
+
+/* sort icon style */
+.sort-btn{ color: var(--cyan-700); }
+.sort-icon{ font-size: .95rem; line-height:1; display:inline-block; transform:translateY(-1px); }
+.sort-btn:hover .sort-icon{ color: var(--cyan-500); }
+
